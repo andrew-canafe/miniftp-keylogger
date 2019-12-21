@@ -2,8 +2,8 @@
 Fully-functional FTP keylogger that I wrote during my free time (2015). Written in x86-64 assembly language. Use at your own risk!
 
 ## Details:
-- Runs on Windows
-- Written in x86-64
+- Runs on 64-bit Windows
+- Written in pure assembly
 - Only 4 KB in size
 
 ## Features:
