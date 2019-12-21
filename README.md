@@ -3,6 +3,7 @@ Fully-functional FTP keylogger that I wrote during my free time (2015). Written 
 
 ## Details:
 - Runs on Windows
+- Written in x86-64
 - Only 4 KB in size
 
 ## Features:
