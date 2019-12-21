@@ -7,6 +7,7 @@ Fully-functional FTP keylogger that I wrote during my teenage years (2015). Writ
 
 ## Features:
 - Deploys itself to a super-hidden directory
+- Records keystrokes using global hooks
 - Remains persistent on startup via Windows registry
 - Uploads logfiles to the specified FTP server
 - Cycles through logfiles using time-based naming conventions
