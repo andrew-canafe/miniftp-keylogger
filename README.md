@@ -19,6 +19,6 @@ Fully-functional FTP keylogger that I wrote during my teenage years (2015). Writ
 ## How to safely remove:
 1. Open up Task Manager -> Find ccsvchst.exe -> Right click -> End task
 2. Open up Registry Editor -> Software\Microsoft\Windows\CurrentVersion\Run -> Find Startup -> Right click -> Delete
-3. Open up Explorer -> View -> Make sure "Hidden items" is checked
+3. Open up Explorer -> View -> Make sure the "Hidden items" box is checked
 4. Go to %APPDATA% and delete the Startup folder and its contents
 5. Optional: delete all files uploaded to the FTP server
