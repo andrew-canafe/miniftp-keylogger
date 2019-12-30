@@ -9,7 +9,7 @@ Fully-functional FTP keylogger (2015) that I wrote during my free time. Written 
 ## Features:
 - Deploys itself to a super-hidden directory
 - Records keystrokes using global hooks
-- Remains persistent on startup via Windows registry
+- Remains persistent on user login via Windows registry
 - Uploads logfiles to the specified FTP server
 - Uploads logfiles to a unique directory created by the client
 - Cycles through logfiles using time-based naming conventions
@@ -28,3 +28,6 @@ You may first need to temporarily disable Windows Defender. However, this can be
 3. Open up Explorer > View > Make sure "Hidden items" **is checked**
 4. Go to %APPDATA% and delete the "Startup" folder and its contents
 5. OPTIONAL: delete all files uploaded to the FTP server
+
+## How to temporarily disable Windows Defender:
+1. Open up Windows Security > Virus & threat protection > Virus & threat protection settings > Manage settings > Make sure "Real-time protection" **is turned off**
