@@ -11,16 +11,20 @@ Fully-functional FTP keylogger (2015) that I wrote during my free time. Written 
 - Records keystrokes using global hooks
 - Remains persistent on startup via Windows registry
 - Uploads logfiles to the specified FTP server
+- Uploads logfiles to a unique directory created by the client
 - Cycles through logfiles using time-based naming conventions
 
 ## How to use:
+You may first need to temporarily disable Windows Defender. However, this can be bypassed by using dynamic encryption tools, renaming the file to a less suspicious name, etc. Running a newer version of the keylogger will automatically overwrite an older version, and vice versa.
 1. Open miniftpkeylogger.asm and edit the username, password, and server name fields
-2. Assemble using MASM64 to create miniftpkeylogger.exe
-3. Use miniftpkeylogger.exe at your own risk
+2. Assemble using MASM64 to create ccsvchst.exe
+3. Use ccsvchst.exe (malware) at your own risk
 
 ## How to safely remove:
-1. Open up Task Manager -> Find ccsvchst.exe -> Right click -> End task
-2. Open up Registry Editor -> Software\Microsoft\Windows\CurrentVersion\Run -> Find Startup -> Right click -> Delete
-3. Open up Explorer -> View -> Make sure the "Hidden items" box is checked
-4. Go to %APPDATA% and delete the Startup folder and its contents
-5. Optional: delete all files uploaded to the FTP server
+1. Open up Task Manager > Find ccsvchst.exe > Right click > End task
+2. Open up Registry Editor > Software\Microsoft\Windows\CurrentVersion\Run > Find Startup > Right click > Delete
+3. Open up Explorer > View > Options > View > Hidden files and folders > Make sure "Show hidden files, folders, and drives" is selected
+3. Open up Explorer > View > Options > View > Make sure "Hide protected operating system files" is *unchecked*
+3. Open up Explorer > View > Make sure "Hidden items" is *checked*
+4. Go to %APPDATA% and delete the "Startup" folder and its contents
+5. OPTIONAL: delete all files uploaded to the FTP server
