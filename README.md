@@ -22,8 +22,8 @@ You may first need to [temporarily disable Windows Defender](https://github.com/
 
 ## How to safely remove:
 1. Open up Task Manager > Find ccsvchst.exe and end task
-2. Open up Registry Editor > HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run > Find Startup and delete value
-2. Open up Registry Editor > HKEY_CURRENT_USER\Software > Find Startup and delete key
+2. Open up Registry Editor > HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run > Find the Startup value and delete
+2. Open up Registry Editor > HKEY_CURRENT_USER\Software > Find the Startup key and delete
 3. Open up Explorer > View > Options > View > Hidden files and folders > Make sure "Show hidden files, folders, and drives" **is selected**
 3. Open up Explorer > View > Options > View > Make sure "Hide protected operating system files" **is unchecked**
 3. Open up Explorer > View > Make sure "Hidden items" **is checked**
