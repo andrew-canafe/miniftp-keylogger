@@ -21,12 +21,13 @@ You may first need to [temporarily disable Windows Defender](https://github.com/
 3. Use ccsvchst.exe (malware) at your own risk
 
 ## How to safely remove:
-1. Open up Task Manager > Find ccsvchst.exe > Right click > End task
-2. Open up Registry Editor > Software\Microsoft\Windows\CurrentVersion\Run > Find Startup > Right click > Delete
+1. Open up Task Manager > Find ccsvchst.exe and end task
+2. Open up Registry Editor > HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run > Find Startup and delete value
+2. Open up Registry Editor > HKEY_CURRENT_USER\Software > Find Startup and delete key
 3. Open up Explorer > View > Options > View > Hidden files and folders > Make sure "Show hidden files, folders, and drives" **is selected**
 3. Open up Explorer > View > Options > View > Make sure "Hide protected operating system files" **is unchecked**
 3. Open up Explorer > View > Make sure "Hidden items" **is checked**
-4. Go to %APPDATA% and delete the "Startup" folder and its contents
+4. Go to %APPDATA% and delete the Startup folder and its contents
 5. OPTIONAL: delete all files uploaded to the FTP server
 
 ## How to temporarily disable Windows Defender:
