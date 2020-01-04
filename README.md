@@ -28,7 +28,7 @@ You may first need to [temporarily disable Windows Defender](https://github.com/
 3. Open up Explorer > View > Options > View > Make sure "Hide protected operating system files" **is unchecked**
 3. Open up Explorer > View > Make sure "Hidden items" **is checked**
 4. Go to %APPDATA% and delete the Startup folder and its contents
-5. OPTIONAL: delete all files uploaded to the FTP server
+5. **OPTIONAL: delete all files uploaded to the FTP server**
 
 ## How to temporarily disable Windows Defender:
 1. Open up Windows Security > Virus & threat protection > Virus & threat protection settings > Manage settings > Make sure "Real-time protection" **is turned off**
