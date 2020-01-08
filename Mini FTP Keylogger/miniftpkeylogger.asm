@@ -215,9 +215,8 @@ reg_create_key:
   mov ecx, HKEY_CURRENT_USER
   call RegCreateKeyExA
   
-  lods dword ptr [rsi]
-  dec eax
-  je reg_create_key
+  test eax, eax
+  jne reg_create_key
   
   mov byte ptr -1[rdi], '/'
   
