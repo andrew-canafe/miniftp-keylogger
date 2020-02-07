@@ -1,4 +1,4 @@
-# Mini-FTP-Keylogger
+# Miniftp Keylogger
 Fully-functional FTP keylogger (updated in 2020) that I wrote during my free time. Written in x86-64 assembly language. Use for educational purposes only, and at your own risk!
 
 ## Details:
