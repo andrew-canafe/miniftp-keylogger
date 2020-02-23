@@ -24,11 +24,11 @@ You may first need to [temporarily disable Windows Defender](https://github.com/
 1. Open up Task Manager > Find ccsvchst.exe and end task
 2. Open up Registry Editor > HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run > Find the Startup value and delete
 2. Open up Registry Editor > HKEY_CURRENT_USER\Software > Find the Startup key and delete
-3. Open up Explorer > View > Options > View > Hidden files and folders > Make sure "Show hidden files, folders, and drives" **is selected**
-3. Open up Explorer > View > Options > View > Make sure "Hide protected operating system files" **is unchecked**
-3. Open up Explorer > View > Make sure "Hidden items" **is checked**
+3. Open up Explorer > View > Options > View > Hidden files and folders > Make sure "Show hidden files, folders, and drives" is selected
+3. Open up Explorer > View > Options > View > Make sure "Hide protected operating system files" is unchecked
+3. Open up Explorer > View > Make sure "Hidden items" is checked
 4. Go to %APPDATA% and delete the Startup folder and its contents
 5. **OPTIONAL: delete all files uploaded to the FTP server**
 
 ## How to temporarily disable Windows Defender:
-1. Open up Windows Security > Virus & threat protection > Virus & threat protection settings > Manage settings > Make sure "Real-time protection" **is turned off**
+1. Open up Windows Security > Virus & threat protection > Virus & threat protection settings > Manage settings > Make sure "Real-time protection" is turned off
